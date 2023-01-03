@@ -26,5 +26,12 @@ const DoggoPostSchema = new mongoose.Schema({
     dogPicturePath: String,
     userPicturePath: String,
     location: String,
-    rabiesNum: String
+    rabiesNum: String,
+    lostOrFound: {
+        type: String,
+        required: true,
+    }
 })
+
+const DoggoPost = mongoose.model("DoggoPost", DoggoPostSchema);
+export default DoggoPost;
